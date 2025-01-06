@@ -15,7 +15,7 @@
         "vimeo/psalm": "*"
     },
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ^8.0",
         "ext-pdo": "*",
         "boesing/psalm-plugin-stringf": "^1.4",
         "cspray/phinal": "^2.0",
