@@ -1,0 +1,6 @@
+<?php
+
+/**
+ * @return array<string, string> @psalm-taint-source input
+ */
+function getallheaders(): array {}

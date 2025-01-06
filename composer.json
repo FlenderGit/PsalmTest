@@ -1,0 +1,25 @@
+{
+    "name": "deloeit/psalm_test",
+    "autoload": {
+        "psr-4": {
+            "Deloeit\\PsalmTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Flender",
+            "email": "96743757+FlenderGit@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "vimeo/psalm": "*"
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-pdo": "*",
+        "boesing/psalm-plugin-stringf": "^1.4",
+        "cspray/phinal": "^2.0",
+        "marartner/psalm-no-empty": "^2.0",
+        "orklah/psalm-strict-equality": "^3.0"
+    }
+}

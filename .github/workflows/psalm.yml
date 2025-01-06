@@ -1,0 +1,34 @@
+name: Psalm Static analysis
+
+on: [push, pull_request]
+permissions:
+  security-events: write
+  actions: read
+
+jobs:
+  psalm:
+    name: Psalm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Mark workspace as safe for Git
+        run: git config --global --add safe.directory /github/workspace
+      - name: Print working directory
+        run: pwd
+
+      - name: List files for debugging
+        run: ls -R
+      - name: Psalm
+        uses: docker://ghcr.io/psalm/psalm-github-actions
+        with:
+          tainted_analysis: true
+          relative_path: .
+          security_analysis: true
+          report_file: results.sarif
+      - name: Upload Security Analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+          token: ${{ secrets.GITHUB_TOKEN }}
+          wait-for-processing: true

@@ -1,0 +1,44 @@
+{
+    "name": "boesing/psalm-plugin-stringf",
+    "type": "psalm-plugin",
+    "description": "Psalm plugin to work with `sprintf`, `printf`, `sscanf` and `fscanf`.",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": "^7.4 || ~8.0.0 || ~8.1.0 || ~8.2.0",
+        "ext-simplexml": "*",
+        "vimeo/psalm": "^4.30 || ^5.0",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "doctrine/coding-standard": "^10.0",
+        "codeception/module-phpbrowser": "^2.0",
+        "codeception/module-asserts": "^2.0",
+        "weirdan/codeception-psalm-module": "^0.14.0",
+        "symfony/yaml": "^5.4",
+        "symfony/console": "^5.4",
+        "symfony/finder": "^5.4"
+    },
+    "extra": {
+        "psalm": {
+            "pluginClass": "Boesing\\PsalmPluginStringf\\Plugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Boesing\\PsalmPluginStringf\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "codecept run",
+        "analyze": "psalm --no-cache"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

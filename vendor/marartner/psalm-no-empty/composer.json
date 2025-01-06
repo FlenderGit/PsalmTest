@@ -1,0 +1,26 @@
+{
+    "name": "marartner/psalm-no-empty",
+    "description": "Do not allow usage of empty()",
+    "type": "psalm-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcus Artner",
+            "email": "git@martner.at"
+        }
+    ],
+    "require": {
+        "vimeo/psalm": "^5.0",
+        "ext-simplexml": "*"
+    },
+    "extra": {
+        "psalm" : {
+            "pluginClass": "Marartner\\PsalmNoEmpty\\Plugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Marartner\\PsalmNoEmpty\\": "src"
+        }
+    }
+}

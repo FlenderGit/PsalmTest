@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<psalm errorLevel="1" runTaintAnalysis="true" findUnusedVariablesAndParams="true" findUnusedCode="true" findUnusedBaselineEntry="true" strictBinaryOperands="true">
+    <projectFiles>
+        <directory name="src"/>
+    </projectFiles>
+    <enableExtensions>
+        <extension name="pdo"/>
+    </enableExtensions>
+    <plugins>
+        <pluginClass xmlns="https://getpsalm.org/schema/config" class="Cspray\Phinal\Plugin"/>
+        <pluginClass xmlns="https://getpsalm.org/schema/config" class="Orklah\StrictEquality\Plugin"/>
+        <pluginClass xmlns="https://getpsalm.org/schema/config" class="Marartner\PsalmNoEmpty\Plugin"/>
+    </plugins>
+    <stubs>
+        <file name="t.phpstub"/>
+    </stubs>
+
+</psalm>
