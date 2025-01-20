@@ -12,7 +12,6 @@
         <pluginClass xmlns="https://getpsalm.org/schema/config" class="Marartner\PsalmNoEmpty\Plugin"/>
     </plugins>
     <stubs>
-        <file name="t.phpstub"/>
+        <file name="stub/pdo.php" preloadClasses="true" />
     </stubs>
-
 </psalm>
